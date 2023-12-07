@@ -559,6 +559,7 @@ h1 span img{
     align-items: center;
     border: none;
     box-shadow: none;
+    cursor: pointer;
 }
 .applyingContainer button img{
     width:16px;
@@ -604,16 +605,17 @@ footer{
 .modalApplication{
     display: flex;
     flex-direction: column;
-    width:30%;
     min-width: 400px;
+    width:30%;
     padding:24px;
     background-color: #393953;
     border-radius: 16px;
     position: fixed;
     visibility: hidden;
     transition: 300ms;
-    top: 15%;
-    left:35%;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
     z-index: 1000000000000000000;
 }
 .modalApplication input{
@@ -632,7 +634,7 @@ footer{
     border: 2px #393953;
 }
 .modalApplication h2{
-    margin-bottom: 22px;
+    margin-bottom: 16px;
     font-weight: 400;
     font-family: Space Mono;
 }
@@ -676,6 +678,13 @@ input::placeholder{
     color: white;
     font-size: 20px;
     font-weight: 700;
+    cursor: pointer;
+}
+button:hover{
+    background-color: white;
+    color: #6966FF;
+    transform: scale(105%);
+    transition: 300ms;
 }
 .shadowForm{
     width: 100%;
@@ -770,4 +779,53 @@ input::placeholder{
     filter: none;
     background-color: white;
     transition: 0.3;
+}
+/*------404 properties--------*/
+.main404{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap:40px;
+   
+}
+main .heading404 {
+    font-size: 300px;
+    line-height: normal;
+    display: flex;
+    gap:20px; 
+    margin: 0;
+}
+.heading404 span {
+    -webkit-text-shadow: 9px 7px 0px  #6966FF, 9px 7px 0px #6966FF;
+    -moz-text-shadow: 9px 7px 0px  #6966FF, 9px 7px 0px #6966FF;
+    text-shadow: 9px 7px 0px #6966FF, 9px 7px 0px #6966FF ;
+}
+.heading404 span:hover {
+    -webkit-text-shadow: -9px 7px 0px  #6966FF, 9px 7px 0px #6966FF;
+    -moz-text-shadow: 9px 7px 0px  #6966FF, 9px 7px 0px #6966FF;
+    text-shadow: -9px -7px 0px #6966FF, -9px -7px 0px #6966FF ;
+    transition: 0.3s;
+}
+.button404{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        background-color: #6966FF;
+        vertical-align: middle;
+        align-items: center; 
+        width:100%;
+        padding: 14px;
+        border-radius: 7.26px;
+        border: none;
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        max-width: 300px;
+}
+.button404:hover{
+    background-color: white;
+    color: #6966FF;
+    transition: 300ms;
 }
