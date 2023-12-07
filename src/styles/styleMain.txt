@@ -1,0 +1,137 @@
+{
+    box-sizing border-box;
+    margin 0;
+    padding 0;
+}
+body{
+    background-color #1C1C28;
+}
+ul{
+    display flex;
+    align-items center;
+    list-style none;
+}
+a{
+    text-decoration none;
+    colorinherit;
+}
+h2{
+    margin-bottom 16px;
+}
+header properties------------------------
+header{
+
+}
+.headerWrapper{
+    max-width 1232px;
+    margin 0 auto;    
+    display flex;
+    justify-content space-between;
+    align-items center;
+    padding 24px 32px;
+}
+.headerWrapper li{
+    padding 12px 16px;
+}
+.headerWrapper lilast-child{
+    background-color #6966FF;
+    border-radius 7.29px;
+}
+main welcomeBlock properties--------------
+.welcomeBlockWrapper{
+    display flex;
+    flex-direction column;
+    align-items center;
+    justify-content space-between;
+    text-align center;
+    max-width 808px;
+    margin  0 auto 78px;
+}
+h1{
+    margin-bottom 40px;
+}
+.welcomeBlockWrapper .buttonBlock{
+    display flex;
+    justify-content flex-start;
+    gap 32px;
+    vertical-align middle;
+}
+.welcomeBlockWrapper .buttonBlock a{
+    padding 12px 16px;
+    background-color #393953;
+    border-radius 7.29px;
+    margin-bottom 60px;
+}
+.welcomeBlockWrapper .buttonBlock anth-child(2){
+    background-color #6966FF;
+}
+.descriptionMain{
+    display flex;
+    justify-content space-between;
+    width 100%;
+}
+.descriptionMain div{
+    display flex;
+    flex-direction column;
+    justify-content center;
+    align-items center;
+    max-width 237px;
+    flex 1 0 0;
+}
+arrow between main and projects
+.arrow-main-proj{
+    display block;
+    margin 0 auto 30px;
+}
+projectsGrants block properties
+.projectGrants{
+    padding 0 108px 80px;
+}
+.projectGrantsContainer{
+    text-align center;
+    margin 0 auto;
+    display flex;
+    flex-direction column;
+    align-items center;
+    max-width 1224px;
+}
+.communitySlider{
+    display flex;
+    flex-direction row;
+    gap 24px;
+}
+.sliderItem{
+    max-width 344px;
+    padding 24px;
+    display flex;
+    flex-direction column;
+    gap 8px;   
+    flex 1 0 0;
+    text-align left;
+    background-color#393953 ;
+    border-radius 16px;
+}
+.sliderItem p{
+    font-size 16px;
+    margin-bottom 184px;
+}
+.projWorth{
+    margin-bottom 8px;
+}
+.blockName{
+    display flex;
+    flex-direction column;
+    gap 16px;
+    margin-bottom 80px;
+    max-width 600px;
+}
+.blockName p{
+    margin-bottom 8px;
+}
+.avatarBlock{
+    display flex;
+}
+.avatar{
+    width40px;
+    height 40px;
+}

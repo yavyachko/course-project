@@ -1,0 +1,342 @@
+@font-face {
+    font-family: "Circular Std";
+    src: url(../fonts/CircularStd-Medium.ttf) format(ttf),
+    url(../fonts/CircularStd-Medium.eot) format(eof),
+    url(../fonts/CircularStd-Medium.woff) format(woff),
+    url(../fonts/CircularStd-Medium.woff2) format(woff2);
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Circular Std";
+    src: url(../fonts/CircularStd-Book.ttf) format(ttf),
+    url(../fonts/CircularStd-Book.eot) format(eof),
+    url(../fonts/CircularStd-Book.woff) format(woff),
+    url(../fonts/CircularStd-Book.woff2) format(woff2);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: "Circular Std";
+    src: url(../fonts/CircularStd-Bold.ttf) format(ttf),
+    url(../fonts/CircularStd-Bold.eot) format(eof),
+    url(../fonts/CircularStd-Bold.woff) format(woff),
+    url(../fonts/CircularStd-Bold.woff2) format(woff2);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Nanum Pen";
+    src: url(../fonts/NanumPenScript-Regular.ttf) format(ttf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:wght@500;700&family=Nanum+Pen+Script&family=Roboto&family=Space+Mono:wght@400;700&display=swap');
+*{
+    font-feature-settings: 'clig' off, 'liga' off;
+}
+.mono {
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #C8C7D8;
+    line-height: 24px;
+    color: var(--text-icon-secondary, #C8C7D8);
+    font-feature-settings: 'clig' off, 'liga' off;
+}
+ul.mono li:nth-child(6) {
+    font-family: 'Circular Std';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.176px;
+}
+.descriptionMain div span:nth-child(2){
+    font-size: 18px;
+}
+.userName{
+    font-size: 60px;
+    margin:0;
+}
+body{
+    font-size: 18px;
+    color: white;
+    font-family: 'Circular Std';
+    font-weight: 400;
+}
+/*headings------------*/
+h1 {
+    font-family: Circular Std;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 88px;
+    /* 110% */
+    letter-spacing: -1.76px;
+}
+h2{
+    font-family: Circular Std;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 120% */
+    letter-spacing: -0.88px;
+    text-align: center;
+}
+h4 {
+    font-family: Circular Std;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    /* 133.333% */
+    letter-spacing: -0.456px;
+}
+h5{
+    font-size: 18px;
+}
+.qaHeading {
+    color: var(--text-icon-primary, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    
+    /* Desktop/Paragraph Large */
+    font-family: Circular Std;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: -0.252px;
+}
+.panel{
+    font-size: 16px;
+    opacity: 65%;
+}
+.descriptionMain div span:nth-child(1){
+    font-size: 20px;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 160% */
+}
+.cardNum {
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    line-height: 80px;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.newsContainer span {
+    font-family: Space Mono;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+.buttonBlock {
+    font-family: Circular Std;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: -0.176px;
+}
+.blockName p {
+    color: var(--text-icon-secondary, #C8C7D8);
+    font-family: Circular Std;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    /* 133.333% */
+    letter-spacing: -0.252px;
+}
+.blockName a {
+    color: var(--accent-brand, #6966FF);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Desktop/Paragraph Large */
+    font-family: Circular Std;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 133.333% */
+    letter-spacing: -0.252px;
+}
+.sliderItem p{
+    color: var(--text-icon-primary, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Circular Std;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: -0.176px;
+}
+.instruction p {
+    color: var(--text-icon-primary, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* Desktop/Paragraph Medium */
+    font-family: Circular Std;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: -0.176px;
+}
+.avatar figcaption {
+    color: var(--pb-base-white, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Desktop/Paragraph Small */
+    font-family: Circular Std;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 171.429% */
+    letter-spacing: -0.084px;
+}
+.applyingContainer span {
+    color: var(--text-icon-primary, #FFF);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Desktop/Paragraph Large */
+    font-family: Circular Std;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 133.333% */
+    letter-spacing: -0.252px;
+}
+@media all and (width <=576px) {
+    h1 {
+        color: var(--text-icon-primary, #FFF);
+        text-align: center;
+        font-feature-settings: 'clig' off, 'liga' off;
+        /* Mobile/Hero */
+        font-family: Circular Std;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px;
+        /* 120% */
+        letter-spacing: -0.84px;
+    }
+
+    h2 {
+        color: var(--text-icon-primary, #FFF);
+        text-align: center;
+        font-feature-settings: 'clig' off, 'liga' off;
+
+        /* Mobile/Heading Large */
+        font-family: Circular Std;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+        /* 133.333% */
+        letter-spacing: -0.408px;
+    }
+    h4{
+        color: var(--text-icon-primary, #FFF);
+
+        /* Desktop/Heading Medium */
+        font-family: Circular Std;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px; /* 133.333% */
+        letter-spacing: -0.456px;
+    }
+
+    .blockName p {
+        color: var(--text-icon-secondary, #C8C7D8);
+        text-align: center;
+        font-feature-settings: 'clig' off, 'liga' off;
+
+        /* Mobile/Paragraph Large */
+        font-family: Circular Std;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 150% */
+        letter-spacing: -0.176px;
+    }
+
+    .blockName a {
+        color: var(--accent-brand, #6966FF);
+        text-align: center;
+        font-feature-settings: 'clig' off, 'liga' off;
+
+        /* Mobile/Paragraph Large */
+        font-family: Circular Std;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 150% */
+        letter-spacing: -0.176px;
+    }
+    .newsItem .mono {
+        color: var(--text-icon-secondary, #C8C7D8);
+        font-feature-settings: 'clig' off, 'liga' off;
+        /* Mobile/Mono Paragraph Medium */
+        font-family: Space Mono;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 171.429% */
+    }
+    nav ul.mono {
+        color: var(--text-icon-secondary, #C8C7D8);
+        font-feature-settings: 'clig' off, 'liga' off;
+        /* Mobile/Mono Paragraph Medium */
+        font-family: Space Mono;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 171.429% */
+    }
+    .qaHeading {
+        color: var(--text-icon-primary, #FFF);
+        font-feature-settings: 'clig' off, 'liga' off;
+        /* Mobile/Paragraph Large */
+        font-family: Circular Std;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 150% */
+        letter-spacing: -0.176px;
+    }
+    ul.mono li:nth-child(6) {
+        font-family: 'Circular Std';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.176px;
+    }
+}
+
