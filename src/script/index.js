@@ -86,7 +86,6 @@ const mobileMenu = () => {
                 document.body.style.overflow = 'hidden';
                 console.log(document.location.pathname);
                 document.location.pathname == '/course-project/' ? document.getElementsByClassName('burgerHeaderImg')[0].src = '/course-project/src/img/icons/fi_x.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_x.svg';
-                document.location.href.substring(addresExecution(document.location.href), document.location.href.length) == '404.html' ? document.getElementsByClassName('burgerHeaderImg')[0].src = './src/img/icons/fi_x.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_x.svg';
                 if (timePassed > header.offsetHeight - 8) clearInterval(timer);
             }
             else if (!flag) {
@@ -94,7 +93,6 @@ const mobileMenu = () => {
                 elementImg[0].style.visibility = 'hidden';
                 console.log(document.location.pathname);
                 document.location.pathname == '/course-project/' ? document.getElementsByClassName('burgerHeaderImg')[0].src = '/course-project/src/img/icons/fi_menu.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_menu.svg';
-                document.location.href.substring(addresExecution(document.location.href), document.location.href.length) == '404.html' ? document.getElementsByClassName('burgerHeaderImg')[0].src = './src/img/icons/fi_menu.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_menu.svg';
                 elementImg[0].style.top = -(timePassed / 2) + 'px';
                 document.body.style.overflowY = 'scroll';
                 if (timePassed > header.offsetHeight) {
