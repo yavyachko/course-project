@@ -75,8 +75,8 @@ const mobileMenu = () =>{
         elementImg[0].style.visibility = 'visible';
         elementImg[0].style.top = timePassed + 'px';
         document.body.style.overflow = 'hidden';
-        document.location.href.substring(0,addresExecution(document.location.href)) ==  'index' ? document.getElementsByClassName('burgerHeaderImg')[0].src = '/src/img/icons/fi_x.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_x.svg';
-        document.location.href.substring(0,addresExecution(document.location.href)) ==  '404' ? document.getElementsByClassName('burgerHeaderImg')[0].src = '/src/img/icons/fi_x.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_x.svg';
+        document.location.href.substring(0,addresExecution(document.location.href)) ==  'index' ? document.getElementsByClassName('burgerHeaderImg')[0].src = '/course-project/src/img/icons/fi_x.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_x.svg';
+        document.location.href.substring(0,addresExecution(document.location.href)) ==  '404' ? document.getElementsByClassName('burgerHeaderImg')[0].src = '/course-project/src/img/icons/fi_x.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_x.svg';
       if (timePassed > header.offsetHeight-8) clearInterval(timer);
     }
     else if(!flag){
