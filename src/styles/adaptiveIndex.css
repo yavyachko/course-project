@@ -147,21 +147,21 @@
     .vector{
         transform: scale(50%);
     }
-    h1 span img{
-        top:40px !important;
-        left: -85px !important;    
+    .welcomeBlock h1 span img{
+        top:40px ;
+        left: -85px ;    
     }
-    .newsBlockMain h2 img{
-        left: -10px !important;
-        top: -35px !important;
+    main .newsBlockMain h2 img{
+        left: -10px ;
+        top: -35px ;
     }
-    .faqBlock .vectorContainer img{
-        top:-20px !important;
-        left: -62px !important;
+    main .faqBlock .vectorContainer img{
+        top:-20px ;
+        left: -62px ;
     }
-    .instructionBlock h2 img{
-        top: 21px !important;
-        left: -40px !important;
+    main .instructionBlock h2 img{
+        top: 21px ;
+        left: -40px ;
     }
     .main .newsBlockMain{
         position: relative;
@@ -285,6 +285,16 @@
         flex-direction: column;
         align-items: center;
     }
+    .modalApplication:nth-child(n){
+        width:85vw;
+        min-width: auto;
+    }
+    .modalApplication:nth-child(n) input{
+        font-size: 16px;
+    }
+    .modalApplication:nth-child(n) textarea {
+        font-size: 16px;
+    }
 }
     @media all and (width <= 1100px) {
         footer:nth-child(n){
@@ -341,6 +351,9 @@
                 flex-direction: column;
                 height:fit-content
             }
+            .instructionsMap .instruction:nth-child(1){
+
+            }
             .instructionsMap .instruction:nth-child(1) .vector{
                 transform: rotate(90deg);
                 top: 100%;
@@ -349,10 +362,33 @@
             .instructionsMap .instruction:nth-child(2) .vector{
                 transform: rotate(270deg) scaleX(-100%);
                 top: 100%;
-                left: 83%;
+                left: 70%;
             }
             .instructionBlock .instructionsMap{
                 height: auto;
             }
     }
-    
+    @media all and (width<475px) {
+        .instructionsMap .instruction{
+            height: 320px;
+            max-width: 276px;
+        }
+        .instructionsMap .instruction:nth-child(3){
+            transform: rotateZ(-2deg);
+            left: 10px;
+        }
+        .instruction .cardNum{
+            margin-bottom: 16px;
+        }
+        .instructionsMap .instruction p{
+            color: var(--text-icon-primary, #FFF);
+        font-feature-settings: 'clig' off, 'liga' off;
+/* Mobile/Paragraph Medium */
+        font-family: Circular Std;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        letter-spacing: -0.084px;
+        }
+    }

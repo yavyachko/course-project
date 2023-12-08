@@ -489,17 +489,13 @@ h1 span img{
 .instruction img{
     position: absolute;
 }
-.cardNum {
-    display: inline-block;
-    margin-bottom: 32px;
-}
 .instruction:nth-child(1){
     transform: rotateZ(-1deg);
     position: relative;
     top:-3px;
     left: 8px;
 }
-.instruction:nth-child(1) img{         
+.instruction:nth-child(1) img[alt="nextBlockArrow"]{         
     top: 4.3%;
     left: 85%;
     transform: rotateZ(180deg);
@@ -513,16 +509,29 @@ h1 span img{
     left: 16px;
     top: 13px;
 }
-.instruction:nth-child(2) img{
+.instruction:nth-child(2) img[alt="nextBlockArrow"]{
     bottom: 28%;
     left: 91%;
     transform: rotateZ(-3deg);
+}
+.cardNum{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width:35px;
+    margin-bottom: 53px;
 }
 .instruction:nth-child(3){
     transform: rotateZ(-2deg);
     z-index: -2;
     top: 5px;
     left: 26px;
+}
+.cardNum img{
+    transform: scale(1.4);
+    margin-top: 8px;
+    margin-left: 2px;
 }
 /*applyingBlock properties------------------*/
 .applyingBlock{
@@ -541,7 +550,6 @@ h1 span img{
 }
 .applyingContainer span{
     margin-bottom: 8px;
-
 }
 .applyingContainer h2{
     margin-bottom: 39px;
@@ -680,7 +688,7 @@ input::placeholder{
     font-weight: 700;
     cursor: pointer;
 }
-.modalApplication button:hover{
+button:hover{
     background-color: white;
     color: #6966FF;
     transform: scale(105%);
