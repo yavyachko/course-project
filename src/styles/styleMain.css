@@ -680,7 +680,7 @@ input::placeholder{
     font-weight: 700;
     cursor: pointer;
 }
-button:hover{
+.modalApplication button:hover{
     background-color: white;
     color: #6966FF;
     transform: scale(105%);
