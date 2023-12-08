@@ -3,7 +3,7 @@ window.onscroll = function () {
     let scrolled = window.pageYOffset || document.documentElement.scrollTop;
     let posTop = window.pageYOffset;
     if (scrolled !== 0) {
-        document.querySelector('header').style.background = 'rgba(0,0,0,' + posTop / 100 + ')';
+        document.querySelector('header').style.background = 'rgba(28,28,40,' + posTop / 100 + ')';
     } else {
         document.querySelector('header').style.background = 'rgba(28,28,40, 0)';
     }
