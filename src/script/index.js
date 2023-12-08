@@ -75,15 +75,15 @@ const mobileMenu = () =>{
         elementImg[0].style.visibility = 'visible';
         elementImg[0].style.top = timePassed + 'px';
         document.body.style.overflow = 'hidden';
-        document.location.href.substring(0,addresExecution(document.location.href)) ==  'index' ? document.getElementsByClassName('burgerHeaderImg')[0].src = './src/img/icons/fi_x.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_x.svg';
-        document.location.href.substring(0,addresExecution(document.location.href)) ==  '404' ? document.getElementsByClassName('burgerHeaderImg')[0].src = './src/img/icons/fi_x.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_x.svg';
+        document.location.href.substring(0,addresExecution(document.location.href)) ==  'index' ? document.getElementsByClassName('burgerHeaderImg')[0].src = '/src/img/icons/fi_x.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_x.svg';
+        document.location.href.substring(0,addresExecution(document.location.href)) ==  '404' ? document.getElementsByClassName('burgerHeaderImg')[0].src = '/src/img/icons/fi_x.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_x.svg';
       if (timePassed > header.offsetHeight-8) clearInterval(timer);
     }
     else if(!flag){
         header.style.background = 'rgba(28,28,40, 1)';
         elementImg[0].style.visibility = 'hidden';
-        document.location.href.substring(0,addresExecution(document.location.href)) ==  'index' ? document.getElementsByClassName('burgerHeaderImg')[0].src = './src/img/icons/fi_menu.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_menu.svg';
-        document.location.href.substring(0,addresExecution(document.location.href)) ==  '404' ? document.getElementsByClassName('burgerHeaderImg')[0].src = './src/img/icons/fi_menu.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_menu.svg';
+        document.location.href.substring(0,addresExecution(document.location.href)) ==  'index' ? document.getElementsByClassName('burgerHeaderImg')[0].src = '/src/img/icons/fi_menu.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_menu.svg';
+        document.location.href.substring(0,addresExecution(document.location.href)) ==  '404' ? document.getElementsByClassName('burgerHeaderImg')[0].src = '/src/img/icons/fi_menu.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_menu.svg';
         elementImg[0].style.top = -(timePassed / 2) + 'px';
         document.body.style.overflowY = 'scroll';
         if (timePassed > header.offsetHeight){
