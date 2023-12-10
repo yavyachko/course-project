@@ -669,7 +669,7 @@ footer{
     font-weight: 400;
     font-family: Space Mono;
 }
-input::placeholder{
+.modalApplication input::placeholder{
     font-family: Space Mono;;
 }
 .modalApplication textarea{
@@ -711,7 +711,7 @@ input::placeholder{
     font-weight: 700;
     cursor: pointer;
 }
-button:hover{
+.modalApplication button:hover{
     background-color: white;
     color: #6966FF;
     transform: scale(105%);
