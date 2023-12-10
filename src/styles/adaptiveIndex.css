@@ -367,7 +367,9 @@
             .instructionBlock .instructionsMap{
                 height: auto;
             }
-    }
+            main .heading404:nth-child(n){
+                font-size: 150px;
+            }
     @media all and (width<475px) {
         .instructionsMap .instruction{
             height: 320px;
