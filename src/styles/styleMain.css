@@ -172,10 +172,10 @@ h1 span img{
     flex-direction: column;
     align-items: center;
 }
-.projectGrants button{
+.prevButton{
     position: absolute;
     top: 45.5%;
-    right: 1.5%;
+    left: 1.5%;
     padding: 12px;
     border-radius: 50%;
     display: flex;
@@ -183,6 +183,20 @@ h1 span img{
     align-items: center;
     border: 0px;
     cursor: pointer;
+    z-index: 10000;
+}
+.nextButton{
+    position: absolute;
+    top: 45.5%;
+    left: 82.5vw;
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    cursor: pointer;
+    z-index: 10000;
 }
 .communitySlider{
     width: 100%;
@@ -192,6 +206,15 @@ h1 span img{
     gap: 24px;
     overflow-x: hidden;
     align-self: start;
+    user-select: none;
+}
+.sliderTrack{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    transition: 0.3s;
 }
 .sliderItem{
     width: 392px;
@@ -688,7 +711,7 @@ input::placeholder{
     font-weight: 700;
     cursor: pointer;
 }
-.modalApplication button:hover{
+button:hover{
     background-color: white;
     color: #6966FF;
     transform: scale(105%);
