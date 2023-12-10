@@ -198,7 +198,7 @@ h1 span img{
     cursor: pointer;
     z-index: 10000;
 }
-.nextButton img{
+.prevButton img{
     transform:rotateZ(180deg);
 }
 .communitySlider{
