@@ -75,7 +75,7 @@ header{
     z-index: 1000000;
     position: sticky;
     top:0;
-    padding: 23px 32px;
+    padding: 24px 32px;
 }
 .headerWrapper{
     max-width: 1376px;
@@ -198,6 +198,9 @@ h1 span img{
     cursor: pointer;
     z-index: 10000;
 }
+.nextButton img{
+    transform:rotateZ(180deg);
+}
 .communitySlider{
     width: 100%;
     position: relative;
@@ -207,6 +210,7 @@ h1 span img{
     overflow-x: hidden;
     align-self: start;
     user-select: none;
+    top: 1px;
 }
 .sliderTrack{
     width: 100%;
