@@ -148,90 +148,29 @@ try {
     console.log("No modals on this page")
 }
 //------------------
+let viewport = document.getElementById("viewport").offsetWidth;
+let btnNext = document.querySelector(".nextButton");
+let btnPrev = document.querySelector(".prevButton");
+let slider = document.querySelector("div.sliderTrack");
+let viewSlide = 0;
+let elementsAmount = document.getElementsByClassName('sliderItem').length;
 
-const sliderContainer = document.querySelector('.communitySlider');
-const sliderTrack = document.querySelector('.sliderTrack');
-const sliderItems = document.querySelectorAll('.sliderItem');
+btnNext.addEventListener("click", function () {
+    if (viewSlide < elementsAmount-1) {
+        viewSlide++;
+    } else {
+        viewSlide = 0;
+    }
+    slider.style.left = -viewSlide * document.getElementsByClassName('sliderItem')[viewSlide].offsetWidth + "px";
 
-let currentSlide = 0;
-let isDragging = false;
-let startPos = 0;
-let currentTranslate = 0;
-let prevTranslate = 0;
-let animationID = 0;
-
-sliderItems.forEach((item, index) => {
-  // обработчик
-  item.addEventListener('mousedown', dragStart);
-  item.addEventListener('touchstart', dragStart);
-  item.addEventListener('mouseup', dragEnd);
-  item.addEventListener('touchend', dragEnd);
-  item.addEventListener('mouseleave', dragEnd);
-  item.addEventListener('mousemove', drag);
-  item.addEventListener('touchmove', drag);
 });
 
-function dragStart(e) {
-  // начальные координаты
-  if (e.type === 'touchstart') {
-    startPos = e.touches[0].clientX;
-  } else {
-    startPos = e.clientX;
-  }
-  isDragging = true;
-  // остановка анимации
-  cancelAnimationFrame(animationID);
-}
-
-function drag(e) {
-  if (isDragging) {
-    let currentPosition = 0;
-    if (e.type === 'touchmove') {
-      currentPosition = e.touches[0].clientX;
+btnPrev.addEventListener("click", function () {
+    if (viewSlide > 0) {
+        viewSlide--;
     } else {
-      currentPosition = e.clientX;
+        viewSlide = elementsAmount-1;
     }
-    // шаг слайдера по x
-    currentTranslate = prevTranslate + currentPosition - startPos;
-    // смещаем слайды
-    sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
-  }
-}
+    slider.style.left = -viewSlide * document.getElementsByClassName('sliderItem')[viewSlide].offsetWidth + "px";
+});
 
-function dragEnd() {
-  // примняем згачения 
-  prevTranslate = currentTranslate;
-  isDragging = false;
-  // пуск анимации
-  animationID = requestAnimationFrame(settle);
-}
-
-function settle() {
-  // переключение на элемент
-  const slideWidth = sliderItems[0].offsetWidth;
-  const threshold = slideWidth / 4;
-  if (currentTranslate > threshold && currentSlide > 0) {
-    currentSlide--;
-  } else if (currentTranslate < -threshold && currentSlide < sliderItems.length - 1) {
-    currentSlide++;
-  }
-  currentTranslate = currentSlide * -slideWidth;
-  // смещение окончательное
-  sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
-  // запуск
-  prevTranslate = currentTranslate;
-  animationID = requestAnimationFrame(settle);
-}
-
-function nextSlide() {
-  currentSlide++;
-  if (currentSlide === sliderItems.length) {
-    currentSlide = 0;
-  }
-  currentTranslate = currentSlide * -sliderItems[0].offsetWidth;
-  sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
-  prevTranslate = currentTranslate;
-}
-
-const nextButton = document.getElementById('nextButton');
-nextButton.addEventListener('click', nextSlide);
