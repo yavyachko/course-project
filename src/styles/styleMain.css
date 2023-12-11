@@ -641,6 +641,17 @@ footer{
     gap:32px;
     align-items: center;
 }
+.socialBlock a{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7.26px;
+}
+.socialBlock a:hover{
+    background-color: #7d7383;
+    transition: 0.3s;
+}
 /*----------------applying form properties----------------*/
 .modalApplication{
     display: flex;
