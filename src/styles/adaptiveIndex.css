@@ -133,6 +133,9 @@
         max-height: 480px;
         align-self: stretch;
     }
+    .userProjects .sliderItem p{
+        font-size: 14px;
+    }
     .communitySlider .sliderItem .avatar{
         position: relative;
         top:8px
