@@ -84,14 +84,14 @@ const mobileMenu = () => {
             elementContainer[0].style.transform = "translateY(" + (-header.offsetHeight - dist - 1) + "px)";
             document.body.style.overflowY = 'scroll';
             header.classList.remove("activeHeader");
-            img[0].src = ""
-            
+            img[0].src = "https://yavyachko.github.io/course-project/src/img/icons/fi_menu.svg";
         }else{
             header.classList.add("active");
             elementContainer[0].style.visibility = "visible";
             elementContainer[0].style.transform = "translateY(" + (header.offsetHeight + dist - 1) + "px)";
             document.body.style.overflowY = 'hidden';
-            header.style.background = "#4F4C64"
+            header.style.background = "#4F4C64";
+            img[0].src = "https://yavyachko.github.io/course-project/src/img/icons/fi_x.svg";
         }
     })
 };
