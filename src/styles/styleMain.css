@@ -73,7 +73,7 @@ a{
 /*header properties------------------------*/
 header{
     z-index: 1000000;
-    position: sticky;
+    position: relative;
     top:0;
     padding: 24px 32px;
 }
