@@ -1,5 +1,6 @@
 //--------for header opacity------
 window.onscroll = function () {
+    document.querySelector("header").style.position = "sticky";
     let scrolled = window.pageYOffset || document.documentElement.scrollTop;
     let posTop = window.pageYOffset;
     if (scrolled !== 0) {
@@ -88,7 +89,6 @@ const mobileMenu = () => {
             header.style.position = "sticky";
         }else{
             header.classList.add("active");
-            header.style.position = "relative";
             elementContainer[0].style.visibility = "visible";
             elementContainer[0].style.transform = "translateY(" + (header.offsetHeight + dist - 1) + "px)";
             document.body.style.overflowY = 'hidden';
