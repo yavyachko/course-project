@@ -80,7 +80,7 @@ const mobileMenu = () => {
     btn[0].addEventListener("click", () =>{
         flag = !flag; 
         if(!flag){
-            header.style.background = 'rgba(0,0,0,' + window.pageYOffset / 100 + ')';
+            header.style.background = 'rgba(28,28,40,' + window.pageYOffset / 100 + ')';
             elementContainer[0].style.visibility = "hidden";
             elementContainer[0].style.transform = "translateY(" + (-header.offsetHeight - dist - 1) + "px)";
             document.body.style.overflowY = 'scroll';
