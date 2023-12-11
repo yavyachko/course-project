@@ -95,6 +95,7 @@ const mobileMenu = () => {
         }
     })
 };
+mobileMenu();
 //----------modal script-------------
 try {
     const shadow = document.getElementsByClassName("shadowForm");
