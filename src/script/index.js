@@ -69,41 +69,32 @@ const addresExecution = (addres) => {
 //-----------mobile menu script--------------
 const mobileMenu = () => {
     let header = document.querySelector('header')
-    let element = document.getElementsByClassName("burgerHeader");
-    let elementImg = document.getElementsByClassName("mobileMenuWrapper");
+    let btn = document.getElementsByClassName("burgerHeader");
+    let elementContainer = document.getElementsByClassName("mobileMenuWrapper");
     let flag = false;
-    element[0].addEventListener('click', function () {
-        flag = !flag;
-        let start = Date.now();
-        console.log(start);
-        let timer = setInterval(function () {
-            let timePassed = Date.now() - start;
-            console.log(timePassed);
-            if (flag) {
-                header.style.background = '#4F4C64';
-                elementImg[0].style.visibility = 'visible';
-                elementImg[0].style.top = timePassed + 'px';
-                document.body.style.overflow = 'hidden';
-                document.location.pathname == '/' ? document.getElementsByClassName('burgerHeaderImg')[0].src = './src/img/icons/fi_x.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_x.svg';
-                document.location.href.substring(addresExecution(document.location.href), document.location.href.length) == '404.html' ? document.getElementsByClassName('burgerHeaderImg')[0].src = './src/img/icons/fi_x.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_x.svg';
-                if (timePassed > header.offsetHeight - 8) clearInterval(timer);
-            }
-            else if (!flag) {
-                header.style.background = 'rgba(28,28,40, 1)';
-                elementImg[0].style.visibility = 'hidden';
-                document.location.pathname == '/' ? document.getElementsByClassName('burgerHeaderImg')[0].src = './src/img/icons/fi_menu.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_menu.svg';
-                document.location.href.substring(addresExecution(document.location.href), document.location.href.length) == '404.html' ? document.getElementsByClassName('burgerHeaderImg')[0].src = './src/img/icons/fi_menu.svg' : document.getElementsByClassName('burgerHeaderImg')[0].src = '../src/img/icons/fi_menu.svg';
-                elementImg[0].style.top = -(timePassed / 2) + 'px';
-                document.body.style.overflowY = 'scroll';
-                if (timePassed > header.offsetHeight) {
-                    clearInterval(timer);
-
-                };
-            }
-        }, 2);
-    });
-}
-mobileMenu();
+    let dist = elementContainer[0].offsetHeight;
+    let img = document.getElementsByClassName("burgerHeaderImg");
+    elementContainer[0].style.top = -dist+"px";
+    console.log( btn[0].style.top);
+    btn[0].addEventListener("click", () =>{
+        flag = !flag; 
+        if(!flag){
+            header.style.background = 'rgba(0,0,0,' + window.pageYOffset / 100 + ')';
+            elementContainer[0].style.visibility = "hidden";
+            elementContainer[0].style.transform = "translateY(" + (-header.offsetHeight - dist - 1) + "px)";
+            document.body.style.overflowY = 'scroll';
+            header.classList.remove("activeHeader");
+            img[0].src = ""
+            
+        }else{
+            header.classList.add("active");
+            elementContainer[0].style.visibility = "visible";
+            elementContainer[0].style.transform = "translateY(" + (header.offsetHeight + dist - 1) + "px)";
+            document.body.style.overflowY = 'hidden';
+            header.style.background = "#4F4C64"
+        }
+    })
+};
 //----------modal script-------------
 try {
     const shadow = document.getElementsByClassName("shadowForm");
