@@ -85,8 +85,10 @@ const mobileMenu = () => {
             document.body.style.overflowY = 'scroll';
             header.classList.remove("activeHeader");
             img[0].src = "https://yavyachko.github.io/course-project/src/img/icons/fi_menu.svg";
+            header.style.position = "sticky";
         }else{
             header.classList.add("active");
+            header.style.position = "relative";
             elementContainer[0].style.visibility = "visible";
             elementContainer[0].style.transform = "translateY(" + (header.offsetHeight + dist - 1) + "px)";
             document.body.style.overflowY = 'hidden';
