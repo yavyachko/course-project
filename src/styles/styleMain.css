@@ -24,6 +24,7 @@ ul{
 .mobileMenuWrapper{
     visibility: hidden;
     position: absolute;
+    transition: 300ms;
     top: -100px;
     width:100%;
     background-color: #4F4C64;
@@ -35,6 +36,7 @@ ul{
     border-radius: 0  0 16px 16px;
     left: 0;
     gap: 88px;
+    transform: translateY(0);
 }
 .mobileMenuWrapper nav ul li{
     font-size: 20px;
