@@ -326,6 +326,9 @@
         }
     }
         @media all and (width <= 768px) {
+              .projectGrants .nextButton, .projectGrants .prevButton{
+                display: none;
+            }
             .headerWrapper li:nth-child(7){
                 display: block;
                 padding:12px;
